@@ -6,25 +6,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; background: #0d0d0d; color: #f1f1f1; line-height: 1.6; }
-    header { background: #1a1a1a; padding: 2rem; text-align: center; }
-    header h1 { font-size: 3rem; color: #00ffe1; }
-    header p { font-size: 1.2rem; color: #ccc; margin-top: 0.5rem; }nav { position: sticky; top: 0; background: #111; display: flex; justify-content: center; gap: 2rem; padding: 1rem 0; border-bottom: 1px solid #333; }
-nav a { color: #fff; text-decoration: none; font-weight: bold; transition: 0.3s; }
-nav a:hover { color: #00ffe1; }
-
-section { padding: 3rem 1.5rem; max-width: 1000px; margin: auto; }
-h2 { color: #00ffe1; margin-bottom: 1rem; }
-.skills, .contact-icons { display: flex; flex-wrap: wrap; gap: 1rem; }
-.skill { background: #222; padding: 0.8rem 1.2rem; border-radius: 5px; }
-
-.project-card { background: #1a1a1a; padding: 1.5rem; border-left: 4px solid #00ffe1; margin-bottom: 1.5rem; border-radius: 5px; }
-.contact-icons a { font-size: 1.5rem; margin-right: 1rem; color: #fff; transition: 0.3s; }
-.contact-icons a:hover { color: #00ffe1; }
-
-.download-btn { background: #00ffe1; color: #000; padding: 0.8rem 1.5rem; border-radius: 25px; font-weight: bold; display: inline-block; margin-top: 1rem; text-decoration: none; }
-footer { text-align: center; padding: 2rem; color: #888; background: #111; }
-
+    body { font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #0f2027, #203a43, #2c5364); color: #f1f1f1; line-height: 1.6; }
+    header { background: #0f2027; padding: 3rem 1rem; text-align: center; }
+    header h1 { font-size: 3rem; color: #00ffe1; margin-bottom: 0.5rem; }
+    header p { font-size: 1.2rem; color: #ccc; }
+    nav { position: sticky; top: 0; background: #121212; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; padding: 1rem 0; border-bottom: 1px solid #444; z-index: 10; }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+    nav a:hover { color: #00ffe1; }
+    section { padding: 3rem 1.5rem; max-width: 1100px; margin: auto; }
+    h2 { color: #00ffe1; margin-bottom: 1rem; font-size: 2rem; }
+    .skills, .contact-icons { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .skill { background: #333; padding: 0.8rem 1.2rem; border-radius: 25px; font-size: 0.9rem; }
+    .project-card { background: rgba(0, 0, 0, 0.4); padding: 1.5rem; border-left: 5px solid #00ffe1; margin-bottom: 2rem; border-radius: 8px; transition: transform 0.3s; }
+    .project-card:hover { transform: translateY(-5px); }
+    .project-card a { color: #00ffe1; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 0.5rem; }
+    .project-card a:hover { text-decoration: underline; }
+    ul li { margin-bottom: 0.5rem; }
+    .contact-icons a { font-size: 1.4rem; margin-right: 1.5rem; color: #fff; text-decoration: none; transition: color 0.3s; }
+    .contact-icons a:hover { color: #00ffe1; }
+    .download-btn { background: #00ffe1; color: #000; padding: 0.8rem 1.5rem; border-radius: 30px; font-weight: bold; display: inline-block; margin-top: 1.5rem; text-decoration: none; transition: background 0.3s; }
+    .download-btn:hover { background: #00bfa5; }
+    footer { text-align: center; padding: 2rem 1rem; color: #ccc; background: #0f2027; }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      nav { gap: 1rem; }
+      .download-btn { display: block; margin-top: 2rem; }
+    }
   </style>
 </head>
 <body>
@@ -39,9 +46,9 @@ footer { text-align: center; padding: 2rem; color: #888; background: #111; }
     <a href="#contact">Contact</a>
   </nav>  <section id="about">
     <h2>About Me</h2>
-    <p>MCA student at Dayananda Sagar University, passionate about programming, cybersecurity, and open-source. Experienced in organizing cybersecurity events, solving algorithm challenges, and building scalable solutions.</p>
+    <p>I am an MCA student at Dayananda Sagar University with a passion for programming, cybersecurity, and open-source. I enjoy building secure, scalable applications, solving DSA problems, and organizing tech events.</p>
   </section>  <section id="skills">
-    <h2>Technical Skills</h2>
+    <h2>Skills</h2>
     <div class="skills">
       <div class="skill">Python</div>
       <div class="skill">C</div>
@@ -50,43 +57,48 @@ footer { text-align: center; padding: 2rem; color: #888; background: #111; }
       <div class="skill">MySQL</div>
       <div class="skill">Git/GitHub</div>
       <div class="skill">Linux</div>
+      <div class="skill">Agentic AI</div>
+      <div class="skill">Google cloud</div>
+      <div class="skill">Computer networking</div>
       <div class="skill">Burp Suite</div>
-      <div class="skill">Wireshark</div>
       <div class="skill">Prompt Engineering</div>
     </div>
   </section>  <section id="projects">
     <h2>Projects</h2>
     <div class="project-card">
       <h3>AI-Powered Customer Support (Flipr Hackathon)</h3>
-      <p>GenAI backend with Django REST, LangChain, ChromaDB (RAG), deployed on GCP with Gunicorn + Nginx.</p>
+      <p>Developed a GenAI backend with Django REST, LangChain, and ChromaDB, deployed on Google Cloud with Gunicorn + Nginx. Built agents to answer FAQs and handle refunds/troubleshooting.</p>
+      <a href="https://github.com/rockraghumnv/ai-customer-suppport" target="_blank">🔗 View on GitHub</a>
     </div>
     <div class="project-card">
       <h3>DSU Branding Website</h3>
-      <p>Custom Django site with email modules, MySQL DB, Docker deployment, and production-ready middleware.</p>
+      <p>Custom Django project with email, MySQL integration, Dockerized and deployed with a secure production-ready stack.</p>
+      <a href="https://github.com/rockraghumnv/dsu-branding-website" target="_blank">will be deployed very soon</a>
     </div>
     <div class="project-card">
       <h3>Other Projects</h3>
-      <p>Airline Booking, Text-to-Speech, AI Knowledge Test, Flipkart Backend.</p>
+      <p>Includes Airline Booking System, Text-to-Speech App, AI Knowledge Level Measurement, and a Flipkart Backend Clone.</p>
+      <a href="https://github.com/rockraghumnv/" target="_blank">🔗 See All Projects</a>
     </div>
   </section>  <section id="achievements">
     <h2>Achievements</h2>
     <ul>
       <li>🥇 Gold Medalist – India Skills 2024 (Cybersecurity)</li>
-      <li>🥈 2nd Prize – "C Your Limit 2.0" Coding Competition</li>
-      <li>🛡️ Organized Cyber Surge Events</li>
+      <li>🥈 2nd Place – "C Your Limit 2.0" Coding Competition</li>
+      <li>🛡️ Organized Cyber Surge events at KLE’s JT College</li>
     </ul>
-    <p><strong>Certification:</strong> Cisco Certified Support Technician (Networking)</p>
+    <p><strong>Certification:</strong> Cisco Certified Support Technician – Networking</p>
   </section>  <section id="contact">
     <h2>Contact</h2>
-    <p>Email: raghavendramanvii@gmail.com<br>Phone: +91 77605 50168</p>
+    <p>Email: <a href="mailto:raghavendramanvii@gmail.com">raghavendramanvii@gmail.com</a><br>Phone: <a href="tel:+917760550168">+91 77605 50168</a></p>
     <div class="contact-icons">
-      <a href="https://github.com/" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
       <a href="https://wa.me/917760550168" target="_blank">WhatsApp</a>
     </div>
     <a class="download-btn" href="resume.pdf" download>Download Resume</a>
   </section>  <footer>
-    <p>&copy; 2025 Raghavendra Manvi. Built with ❤️</p>
+    <p>&copy; 2025 Raghavendra Manvi. Designed with ❤️ for impact.</p>
   </footer>
 </body>
 </html>
